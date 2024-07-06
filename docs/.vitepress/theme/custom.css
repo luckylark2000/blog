@@ -1,0 +1,10 @@
+/* .vitepress/theme/custom.css */
+:root {
+  --vp-c-brand-1: #646cff;
+  --vp-c-brand-2: #747bff;
+}
+.name .clip {
+  background: linear-gradient(to right, #646cff, purple);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

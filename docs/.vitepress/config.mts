@@ -1,28 +1,53 @@
-import { defineConfig } from 'vitepress'
+import { defineConfig } from "vitepress";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "coding 消烦员的博客",
+  base: "/blog/",
   description: "记录成长之旅",
+  markdown: {
+    lineNumbers: true
+  },
+
   themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
+    docFooter: {
+      prev: "上一页",
+      next: "下一页"
+    },
+    outline: {
+      label: "页面导航"
+    },
+    returnToTopLabel: "回到顶部",
+    sidebarMenuLabel: "菜单",
+    darkModeSwitchLabel: "主题",
+    lightModeSwitchTitle: "切换到浅色模式",
+    darkModeSwitchTitle: "切换到深色模式",
+    search: {
+      provider: "local"
+    },
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
+      { text: "Home", link: "/" },
+      { text: "Blog", link: "/content" }
     ],
 
     sidebar: [
       {
-        text: 'Examples',
+        text: "简介",
+        collapsed: false,
+        items: [{ text: "自我介绍", link: "/introduce" }]
+      },
+      {
+        text: "LeetCode",
+        collapsed: true,
         items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
+          { text: "两数之和", link: "/leetcode/twoSum" },
+          { text: "二分查找", link: "/leetcode/binarySearch" }
         ]
       }
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: "github", link: "https://github.com/luckylark2000/blog" }
     ]
   }
-})
+});
