@@ -43,6 +43,16 @@ export default defineConfig({
           { text: "两数之和", link: "/leetcode/twoSum" },
           { text: "二分查找", link: "/leetcode/binarySearch" }
         ]
+      },
+      {
+        text: "问题解决",
+        collapsed: true,
+        items: [
+          {
+            text: "解决.yml文件中提示 name 无效",
+            link: "/problemSolve/deployGithubActiveNameNotValid"
+          }
+        ]
       }
     ],
 
