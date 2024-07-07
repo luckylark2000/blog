@@ -52,7 +52,7 @@ export default withMermaid({
         collapsed: true,
         items: [
           { text: "面向对象基础知识", link: "/design-pattern/basicOOP" },
-          { text: "UML 类图", link: "/design-pattern/UML" }
+          { text: "UML 类图", link: "/design-pattern/UMLClassGraph" }
         ]
       },
       {
