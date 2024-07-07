@@ -1,18 +1,21 @@
-import { defineConfig } from "vitepress";
-
+// import { defineConfig } from "vitepress";
+import { withMermaid } from "vitepress-plugin-mermaid";
 // https://vitepress.dev/reference/site-config
-export default defineConfig({
+export default withMermaid({
   title: "coding 消烦员的博客",
   base: "/blog/",
   description: "记录成长之旅",
   markdown: {
     lineNumbers: true
   },
-
   themeConfig: {
     docFooter: {
       prev: "上一页",
       next: "下一页"
+    },
+    footer: {
+      message: "Released under the ISC License.",
+      copyright: "Copyright © 2024-present Estar Zhang"
     },
     outline: {
       label: "页面导航"
@@ -45,6 +48,24 @@ export default defineConfig({
         ]
       },
       {
+        text: "设计模式",
+        collapsed: true,
+        items: [
+          { text: "面向对象基础知识", link: "/design-pattern/basicOOP" },
+          { text: "UML 类图", link: "/design-pattern/UML" }
+        ]
+      },
+      {
+        text: "工具安装",
+        collapsed: true,
+        items: [
+          {
+            text: "在VitePress中安装 Mermaid",
+            link: "/toolInstall/installMermaidInVitepress"
+          }
+        ]
+      },
+      {
         text: "问题解决",
         collapsed: true,
         items: [
@@ -58,6 +79,13 @@ export default defineConfig({
 
     socialLinks: [
       { icon: "github", link: "https://github.com/luckylark2000/blog" }
-    ]
+    ],
+    lastUpdated: {
+      text: "Updated at",
+      formatOptions: {
+        dateStyle: "full",
+        timeStyle: "medium"
+      }
+    }
   }
 });
