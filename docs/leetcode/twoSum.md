@@ -1,4 +1,8 @@
-# 两数之和
+# 哈哈哈，再战前端 LeeCode 算法之两数之和 twoSum，两种解法精讲，含 ES6 Map 知识点复习
+
+从本次文章开始，我就开启前端 LeetCode 算法的刷题系列更新了，主要更新一些前端面试高频的算法题目，会包含解题思路和代码手写，算法用到的知识点回顾，如果看完本文觉得还不错的话，可以点波关注不迷路
+
+<!-- markdownlint-disable -->
 
 [[toc]]
 
@@ -113,7 +117,7 @@ const twoSum = function (nums, target) {
 const twoSum = function (nums, target) {
   const map = new Map();
   for (let i = 0; i < nums.length; i++) {
-    // 另一种写法
+    // 另一种if语句写法
     // if(map.get(target - nums[i]) !== undefined)
     if (map.has(target - nums[i])) {
       return [i, map.get(target - nums[i])];
@@ -125,7 +129,7 @@ const twoSum = function (nums, target) {
 ```
 
 时间复杂度分析：
-一层 for 循环，时间复杂度 O(n)，Map 的访问速度是 O(1)，所以时间复杂度是 O(n)。
+一层 for 循环，时间复杂度 O(n)，Map 的访问速度是常数级接近 O(1)，所以总的时间复杂度是 O(n)。
 
 ## ES6 的 Map
 
@@ -181,3 +185,9 @@ map.size; //1
 map.clear(); //清空map
 map.size; //0
 ```
+
+## 总结
+
+本文探讨了 LeetCode 中的"两数之和"问题的两种解法：一是暴力解法，使用双层循环，时间复杂度 O(n^2)；二是更高效的哈希表解法，利用 ES6 Map 存储遍历过程，以 O(n)时间复杂度完成。文章最后详细回顾了 Map 的使用，包括创建、插入、删除、查询操作及属性，通过示例代码加深理解。
+
+如果觉得还不错的话，可以点个赞哟，如果你也在刷算法的话，也可以点波关注，更多 LeetCode 算法持续更新中。
