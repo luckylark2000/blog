@@ -6,6 +6,8 @@
     "strs",
     "tada",
     "uniapp",
-    "vitepress"
+    "vitepress",
+    "vnode",
+    "Vuex"
   ]
 }
