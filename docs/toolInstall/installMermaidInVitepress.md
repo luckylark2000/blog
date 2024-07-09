@@ -4,7 +4,7 @@
 
 ## 介绍
 
-在 VitePress 中安装 Mermaid 需要安装一个插件，名字是 vitepress-plugin-mermaid。
+在 VitePress 中如果想要画流程图，饼图，UML 类图等一系列图的话，VitePress 原生是不支持的，但是我们可以使用 Mermaid 的 vitepress 插件，名字是 vitepress-plugin-mermaid。下面介绍如何安装和使用在 VitePress 中安装 Mermaid 需要安装一个插件，名字是 vitepress-plugin-mermaid。
 
 [Github 地址](https://github.com/emersonbottero/vitepress-plugin-mermaid)
 
@@ -178,3 +178,7 @@ pie title Pets adopted by volunteers
     "Cats" : 85
     "Rats" : 15
 ```
+
+## 总结
+
+本文主要介绍了 在 VitePress 中安装插件并使用 mermaid 语法来扩展 VitePress 画一些图，有收获的话可以点赞哟。
