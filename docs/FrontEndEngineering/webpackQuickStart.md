@@ -138,7 +138,7 @@ css-loader 负责加载 entry 入口导入的 css 文件，style-loader 负责�
 
 在 src 下创建一个自定义文件名 例如 test.esz，写入：
 
-```esz
+```txt
 <script>
     export default {
         a:1,

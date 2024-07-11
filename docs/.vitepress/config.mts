@@ -40,11 +40,21 @@ export default withMermaid({
         items: [{ text: "自我介绍", link: "/introduce" }]
       },
       {
+        text: "JavaScript",
+        collapsed: true,
+        items: [{ text: "ajax", link: "/JavaScript/ajax" }]
+      },
+      {
         text: "LeetCode",
         collapsed: true,
         items: [
           { text: "两数之和", link: "/leetcode/twoSum" },
-          { text: "二分查找", link: "/leetcode/binarySearch" }
+          { text: "二分查找", link: "/leetcode/binarySearch" },
+          { text: "逆波兰表达式求值", link: "/leetcode/evalRPN" },
+          { text: "验证回文串", link: "/leetcode/isPalindrome" },
+          { text: "最长连续序列", link: "/leetcode/longestConsecutive" },
+          { text: "买卖股票的最佳时机", link: "/leetcode/maxProfit" },
+          { text: "异位词分组", link: "/leetcode/groupAnagrams" }
         ]
       },
       {
