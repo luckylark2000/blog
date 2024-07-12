@@ -21,6 +21,15 @@ XMLHttpRequest.readyState 属性返回一个 XMLHttpRequest 代理当前所处�
 | 3 | LOADING | 下载中；responseText 属性已经包含部分数据。 |
 | 4 | DONE | 下载操作已完成。 |
 
+#### status
+
+是标准的 http 状态码
+
+- 2xx－表示成功处理请求，如 200
+- 3xx－需要重定向，浏览器直接跳转，如 301,302,304
+- 4xx－客户端请求错误，如 404403
+- 5xx-服务器端错误
+
 ### 实例方法
 
 ### 事件
@@ -32,8 +41,6 @@ XMLHttpRequest.readyState 属性返回一个 XMLHttpRequest 代理当前所处�
 ## 跨域大常见实现方式
 
 ## 知识点
-
-### XMLHttpRequest
 
 ### 状态码
 
