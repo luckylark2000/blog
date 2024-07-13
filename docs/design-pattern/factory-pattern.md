@@ -4,6 +4,10 @@
 
 ## 概念
 
+## UML 类图
+
+![alt text](/images/uml-factory-standard.png)
+
 ## 代码
 
 ```ts
@@ -62,10 +66,6 @@ const a = creator.create("p1", "a");
 console.log(a);
 a.fn1();
 ```
-
-## UML 类图
-
-![alt text](/images/uml-factory-standard.png)
 
 ## 分析
 

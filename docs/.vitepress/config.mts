@@ -63,7 +63,9 @@ export default withMermaid({
         items: [
           { text: "面向对象基础知识", link: "/design-pattern/basicOOP" },
           { text: "UML 类图", link: "/design-pattern/UMLClassGraph" },
-          { text: "工厂模式", link: "/design-pattern/factory" }
+          { text: "工厂模式", link: "/design-pattern/factory-pattern" },
+          { text: "单例模式", link: "/design-pattern/singleton-pattern" },
+          { text: "观察者模式", link: "/design-pattern/observer-pattern" }
         ]
       },
       {
