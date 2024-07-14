@@ -79,14 +79,96 @@ sub.setState(4);
 
 ## 观察者模式应用场景
 
-DOM 事件
+### DOM 事件
 
-Vue React 组件生命周期
+button 的点击事件，一个 button 的 click 可以绑定多个监听回调函数
 
-Vue 的 watch
+### Vue React 组件生命周期
 
-Vue 组件更新过程
+### Vue 的 watch
 
-各种异步操作
+watchEffect 和 watch 监听 ref 和 reactive 数据，immediate，deep 等等
 
-MutationObserver
+### Vue 组件更新过程
+
+官方图片，主要是 watcher 监听 data 部分是观察者模式
+
+### 各种异步操作
+
+定时器 setTimeout，setInterval
+
+Promise.then
+
+Node 中的，stream, readline,httpServer
+
+```js
+// stream 读取字符
+const fs =require('fs');
+const readStream =fs.createReadStream('./data/yarn.lock.txt');
+//文件字符的Length
+let length =0;
+readStream.on('data',function (chunk){
+const curLength = chunk.toString().length;
+console.log('current length',curLength);
+length += curLength;
+})
+readStream.on('end',function(){
+console.log(length);
+}
+```
+
+```js
+const readline =require('readline')
+const fs =require('fs')
+const rl=readline.createInterface({
+input:fs.createReadStream('./data/yarn.lock.txt')
+})
+//文件有多少行
+let lineNum =0
+
+rl.on('line'，function(line){
+lineNum++})
+
+rl.on('close'，function(){
+console.log('lineNum',lineNum)
+})
+```
+
+### MutationObserver
+
+异步监听，当被监听的对象发生了变化，就会触发`MutationObserver的回调函数`
+
+```js
+const callback: MutationCallback = (
+  records: MutationRecord[],
+  observer: MutationObserver
+) => {
+  for (const record of records) {
+    console.log(record);
+  }
+  console.log(observer);
+};
+
+const observer = new MutationObserver(callback);
+
+const el = document.getElementById("container");
+if (el) {
+  // 开启监听
+  observer.observe(el, {
+    attributes: true, //监听属性
+    attributeFilter: ["style"], //声明哪些属性名会被监听的数组
+    childList: true, //监听 target 节点中发生的节点的新增与删除
+    attributeOldValue: true, //监听老的属性
+    characterData: true, //监听文本
+    subtree: true, //监听以 target 为根节点的整个子树
+    characterDataOldValue: true //监听老的文本节点
+  });
+
+  const p1 = document.createElement("p");
+  p1.innerText = "hello";
+
+  el.appendChild(p1);
+  p1.style.color = "red";
+  p1.innerHTML = `<div>hhhhh</div>`;
+}
+```

@@ -14,6 +14,8 @@ link、img、script 可以跨域
 
 jsonp 原理就是利用 script 可以跨域
 
+postMessage 的方式
+
 `<img/>`可以用于统计打点，可使用第三方服务统计
 `<link/>`、、`<script/>`可以使用 CDN，CDN 一般都是外域
 `<script/>`可以实现 jsonp
