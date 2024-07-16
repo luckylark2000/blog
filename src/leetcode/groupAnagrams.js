@@ -1,17 +1,23 @@
-/**
- * @param {string[]} strs
- * @return {string[][]}
+/**异位词分组
+ * @param {string[]} strs 一个字符串数组
+ * @return {string[][]} 返回一个二维数组，也就是分组的异位词
  */
 var groupAnagrams = function (strs) {
+  // 初始化一个哈希表，表的结构大致是{ key1 => [str1,str2,...], key2 => [str3,..], ... }
   const map = new Map();
+  // 遍历strs字符串数组
   strs.forEach(item => {
-    const c = item.split("").sort().join("");
-    if (map.has(c)) {
-      map.set(c, [item, ...map.get(c)]);
+    // 把当前字符串排个序当做哈希表map的key
+    const key = item.split("").sort().join("");
+    // 如果key已经在map中就把当前字符加到map中key对应的字符数组中
+    // 如果key不在map中，就向map中新增一个键值对key->[item]
+    if (map.has(key)) {
+      map.get(key).push(item);
     } else {
-      map.set(c, [item]);
+      map.set(key, [item]);
     }
   });
+  // 把map中的所有的key对应的数组合并为一个二维数组并返回
   return Array.from(map.values());
 };
 
