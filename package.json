@@ -10,7 +10,7 @@
     "docs:preview": "vitepress preview docs"
   },
   "keywords": [],
-  "author": "",
+  "author": "Estar Zhang",
   "license": "ISC",
   "devDependencies": {
     "mermaid": "^10.9.1",
