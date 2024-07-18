@@ -54,7 +54,8 @@ export default withMermaid({
           { text: "验证回文串", link: "/leetcode/isPalindrome" },
           { text: "最长连续序列", link: "/leetcode/longestConsecutive" },
           { text: "买卖股票的最佳时机", link: "/leetcode/maxProfit" },
-          { text: "异位词分组", link: "/leetcode/groupAnagrams" }
+          { text: "异位词分组", link: "/leetcode/groupAnagrams" },
+          { text: "柱状图中最大的矩形", link: "/leetcode/largestRectangleArea" }
         ]
       },
       {
