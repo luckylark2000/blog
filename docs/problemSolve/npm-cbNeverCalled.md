@@ -1,6 +1,7 @@
 # 解决 npm install 出错：cb（） never called，方案汇总
 
 ## 背景
+
 今天起项目的时候，之前把 node_modules 删了，需要重新安装，但是重新 npm install 安装的时候，就报了错：
 
 ```bash
@@ -64,4 +65,4 @@ git apply my_change.patch
 
 ## 总结
 
-本文汇总了自己在解决 npm install 的时候遇到的 `cd() never called!` 的问题，并总结了解决方法。分享了 git patch 的使用方法。有收获的话可以点个免费的赞哟。
+本文汇总了自己在解决 npm install 的时候遇到的 `cd() never called!` 的问题的解决方法。分享了 git patch 的使用方法。有收获的话可以点个免费的赞哟。
