@@ -12,7 +12,7 @@ graphic 图层配置介绍：<https://echarts.apache.org/zh/option.html#graphic>
 graphic: [{//由于visualMap没有直接设置标题的配置，这里使用graphic来设置
     type: 'text',
     left: '6px',//根据 visualMap 的位置自己调整
-    bottom: '100%',//根据 visualMap 的位置自己调整
+    bottom: '10%',//根据 visualMap 的位置自己调整
     style: {
         text: '自定义文字',
         fontSize: 14,
