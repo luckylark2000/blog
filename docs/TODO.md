@@ -4,3 +4,4 @@
 - [ ] 为什么nodejs会选择v8作为js的引擎？
 - [ ] recordNodeUpgrade node升级记录
 - [ ]  corejsVersionProblem corejs版本问题，差一点点
+- [ ]  封装一个包含刷新开关，刷新间隔下拉框的 Vue2 组件
