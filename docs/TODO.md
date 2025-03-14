@@ -17,3 +17,10 @@
 - [ ]  写一个对象深度系列文章（深度拷贝，深度合并，深度筛选）
 - [ ]  写一个前端 vscode 调试指南文章
 - [ ]  写一个图形拖拽编辑器（参考 vue fabric editor）
+- [ ]  写一个muPDF使用教程
+
+待学习：
+
+WebGL:
+
+- pixi.js 网址：<https://github.com/pixijs/pixijs>
