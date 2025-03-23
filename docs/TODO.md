@@ -19,6 +19,8 @@
 - [ ] 写一个图形拖拽编辑器（参考 vue fabric editor）
 - [ ] 写一个 muPDF 使用教程
 - [ ] 开发中常见的 Loader
+- [ ] 拖拽排序
+- [ ] 使用 node 脚本自动为项目中的外链在 index.html 中加入 dns-prefetch
 
 待学习：
 
