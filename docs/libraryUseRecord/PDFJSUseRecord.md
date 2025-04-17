@@ -51,3 +51,9 @@ pageView.setPdfPage(page)
 
 pageView.draw()
 ```
+
+## 实战参考项目
+
+基于PDFJS-DIST + CANVAS的PDF模板签字盖章定位工具
+
+仓库地址：<https://gitee.com/twoke/pdf-template-signature-location>
