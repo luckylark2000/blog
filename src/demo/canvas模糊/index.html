@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      canvas {
+        width: 400px;
+        height: 400px;
+        border: 1px solid red;
+        background-color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="cvs" draggable="true"></canvas>
+    <script>
+      const cvs = document.getElementById("cvs");
+      const ctx = cvs.getContext("2d");
+
+      class Ball {
+        constructor(x, y, r, color) {
+          this.x = x;
+          this.y = y;
+          this.r = r;
+          this.color = color;
+        }
+        draw() {
+          ctx.clearRect(0, 0, cvs.width, cvs.height);
+          cvs.height = 400 * devicePixelRatio;
+          cvs.width = 400 * devicePixelRatio;
+          ctx.beginPath();
+          ctx.arc(
+            this.x * devicePixelRatio,
+            this.y * devicePixelRatio,
+            this.r * devicePixelRatio,
+            0,
+            Math.PI * 2
+          );
+          ctx.fillStyle = this.color;
+          ctx.fill();
+          ctx.closePath();
+          //   中间写一行字：hello
+          ctx.fillStyle = "black";
+          ctx.font = `${30 * devicePixelRatio}px Arial`;
+          ctx.fillText("hello", 0, 25 * devicePixelRatio);
+        }
+      }
+      class Text {
+        constructor(color) {
+          this.color = color;
+        }
+        draw(x, y, text) {
+          //   ctx.clearRect(0, 0, cvs.width, cvs.height);
+          ctx.fillStyle = this.color;
+          ctx.font = `${30 * devicePixelRatio}px Arial`;
+          ctx.fillText(text, x * devicePixelRatio, y * devicePixelRatio);
+        }
+      }
+      const ball = new Ball(200, 200, 150, "red");
+      const text = new Text("blue");
+      ball.draw();
+      text.draw(0, 390, "@ez-coder");
+      window.addEventListener("resize", function (e) {
+        console.log("resize", devicePixelRatio);
+        ball.draw();
+        text.draw(0, 390, "@ez-coder");
+      });
+    </script>
+  </body>
+</html>
