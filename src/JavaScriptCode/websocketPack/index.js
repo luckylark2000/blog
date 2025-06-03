@@ -1,6 +1,6 @@
 import WebsocketClient from "./websocket.js";
 
-const client = new WebsocketClient({port:666});
+const client = new WebsocketClient({port:16088});
 
 const btn1 = document.getElementById("btn1")
 const btn2 = document.getElementById("btn2")
@@ -21,6 +21,13 @@ btn2.addEventListener("click", function () {
     console.log("接收的错误数据",error);
   })
 })
+// btn1.addEventListener("click", function () { 
+//   client.callWithRetry("SAM_GetDeviceList").then(function (data) { 
+//     console.log("SAM_GetDeviceList 接收的成功数据",data);
+//   }).catch(function (error) { 
+//     console.log("接收的错误数据",error);
+//   })
+// })
 
 ping.addEventListener("click", function () { 
   // client.send("ping")
