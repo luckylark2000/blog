@@ -4,23 +4,23 @@
 
 你是否遇到过这样的 Web 前端开发场景：
 
-我们在网页上提交了表单或更新了数据，这个时候手动点击浏览器的返回按钮，会返回到历史页面，我们期望看到最新的内容。
+我们在网页上提交了表单或更新了数据，这个时候手动点击浏览器的返回按钮，会返回到历史页面，我们原本期望在历史页面看到最新的内容。
 
-但是发现页面似乎“停滞”在过去？这背后的原因很可能与一个叫做Back-Forward Cache（简称bfcache）的浏览器特性有关。
+但是发现页面似乎“停滞”在过去？代码并没有重新执行？数据没有重新获取？这背后的原因很可能与一个叫做Back-Forward Cache（简称bfcache）的浏览器特性有关。
 
-没有更新的原因是，页面会从浏览器的 bfcache 恢复，简称命中 bfcache，这是浏览器的默认行为，进入缓存时，会把所有的数据缓存起来，代码暂停执行，下次访问的时候，会恢复这些数据，并恢复代码执行，并不会重新请求数据，重新执行一遍代码，所以拿不到最新的数据。
+其实没有更新的原因是：页面会从浏览器的 bfcache 恢复，简称命中 bfcache，这是浏览器的默认行为，进入缓存时，会把所有的数据缓存起来，代码暂停执行，下次访问的时候，会恢复这些数据，并恢复代码执行，并不会重新请求数据，重新执行一遍代码，所以拿不到最新的数据。
 
-浏览器的默认行为为什么要有 bfcache？其实目的是为了提升用户体验，特别是在网络慢的情况下，用户体验会更好,点击返回响应更快，减少网络请求，节省时间和资源。
+浏览器的默认行为中，为什么要有 bfcache？其实目的其实是为了提升用户体验，特别是在网络慢的情况下，用户体验会更好,点击返回响应更快，减少网络请求，节省时间和资源。
 
-那如何才能不让浏览器命中 bfcache 呢？特别是不想缓存某些网页的时候。
+那如何才能不让浏览器命中 bfcache 呢？特别是不想缓存某些网页的时候？
 
-## 解决方法
+## 解决页面没有重新加载的方法
 
 ### 方法一：监听 pageshow 事件（推荐）
 
 解决思路的话，其实就是主要利用一种前端思维，命中bfcache肯定是一个触发事件，刚好window上的 addEventListener 就可以监听各种事件，如果有一个事件可以刚好监听到，那么就可以解决这个问题。好巧不巧 pageshow 事件恰好可以监听到命中 bfcache 的事件。
 
-关于 pageshow 事件，[MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/Window/pageshow_event) 上是这么介绍的：当一条会话历史记录被执行的时候将会触发页面显示 (pageshow) 事件。(这包括了后退/前进按钮操作，同时也会在 onload 事件触发后初始化页面时触发)
+关于 pageshow 事件，[MDN page-show](https://developer.mozilla.org/zh-CN/docs/Web/API/Window/pageshow_event) 上是这么介绍的：当一条会话历史记录被执行的时候将会触发页面显示 (pageshow) 事件。(这包括了后退/前进按钮操作，同时也会在 onload 事件触发后初始化页面时触发)
 
 那么我们只要监听到 pageshow 事件，确定是页面被缓存了，然后刷新页面就行了。直接上代码：
 
@@ -39,9 +39,9 @@ window.removeEventListener('pageshow', function (event) { })
 
 `window.addEventListener('pageshow', function (event) { })` 监听 pageshow 事件，监听成功执行回调函数，event.persisted 表示页面是否被缓存，如果页面被缓存，则 event.persisted 为 true，否则为 false。
 
-event.persisted 为 true 的时候，表示页面被缓存，此时调用 window.reload() 重新加载页面，重新请求接口，重新渲染页面。
+event.persisted 为 true 的时候，表示页面被缓存，此时调用 window\.reload() 就会强制重新加载页面，从而 重新请求接口，重新渲染页面。
 
-最后在合适的时机取消监听事件，防止内存泄漏。
+最后我们在合适的时机调用`removeEventListener`，取消监听事件，防止内存泄漏。
 
 ### 方法二：禁止缓存(谨慎使用)
 
@@ -59,7 +59,7 @@ location / {
 }
 ```
 
-然后重启 nginx 服务，然后用隐身模式访问页面，可以控制台手动修改location.href，再点击浏览器返回按钮，就可以看到页面没有命中 bfcache，而是直接重新请求接口，渲染页面。
+然后重启 nginx 服务，用浏览器隐身模式访问页面，可以在Console控制台手动修改location.href，先跳转到指定页面，再点击浏览器返回按钮，返回到之前的页面，就可以看到页面没有命中 bfcache，而是直接重新请求接口，重新渲染页面。
 ![bfcacheNoStoreHeader](images/bfcacheNoStoreHeader.png)
 
 也可以使用下文中介绍的，浏览器自带的测试 bfcache 的方式。
@@ -74,7 +74,7 @@ location / {
 
 设置了  Cache-Control: no-store 的页面：
 ![bfcacheTestInChrome](images/bfcacheTestInChrome.png)
-意思就是网页资源有`cache-control: no-store`，无法进入 bfcache
+给出的原因大致意思就是：网页资源有`cache-control: no-store`配置，无法进入 bfcache
 
 ### 命中的
 
