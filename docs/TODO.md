@@ -21,6 +21,7 @@
 - [ ] 开发中常见的 Loader
 - [ ] 拖拽排序
 - [ ] 使用 node 脚本自动为项目中的外链在 index.html 中加入 dns-prefetch
+- [ ] 写一个 webpack loader 或者 plugin 来剔除打包后的代码中的 url
 
 待学习：
 
