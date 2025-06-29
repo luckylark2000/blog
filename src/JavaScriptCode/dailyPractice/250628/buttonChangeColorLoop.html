@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div
+      id="box"
+      style="width: 200px; height: 200px; background-color: yellow"
+    ></div>
+    <button id="change">点我改变颜色</button>
+    <button id="pause">暂停</button>
+    <button id="end">点我结束</button>
+    <button id="reset">重置</button>
+  </body>
+  <script>
+    let btn = document.querySelector("#change");
+    let box = document.querySelector("#box");
+    let pauseBtn = document.querySelector("#pause");
+    let stopBtn = document.querySelector("#end");
+    let resetBtn = document.querySelector("#reset");
+    /* 方式一：生成器函数 */
+    // function* colorGenerator() {
+    //   yield "red";
+    //   yield "green";
+    //   yield "blue";
+    //   yield "yellow";
+    // }
+    // let colorGen = colorGenerator();
+    // btn.onclick = function () {
+    //   let color = colorGen.next();
+    //   if (color.done) {
+    //     colorGen = colorGenerator();
+    //     color = colorGen.next();
+    //   }
+    //   box.style.backgroundColor = color.value;
+    // };
+    /* 方式二：生成器函数，优化版,扩展暂停，继续，结束，重置 */
+    function* colorGenerator() {
+      while (true) {
+        for (let color of ["red", "green", "blue", "yellow"]) yield color;
+      }
+    }
+    let colorGen = colorGenerator();
+    let isPaused = false;
+    btn.onclick = function () {
+      !isPaused && (box.style.backgroundColor = colorGen.next().value);
+    };
+    // 下面扩展，暂停/继续，结束,重新开始 功能
+    stopBtn.onclick = function () {
+      colorGen.return();
+      isPaused = false;
+      pauseBtn.textContent = "暂停";
+      pauseBtn.disabled = true;
+    };
+    pauseBtn.onclick = function () {
+      isPaused = !isPaused;
+      pauseBtn.textContent = isPaused ? "继续" : "暂停";
+    };
+    resetBtn.onclick = function () {
+      box.style.backgroundColor = "yellow";
+      colorGen = colorGenerator();
+      isPaused = false;
+      pauseBtn.textContent = "暂停";
+      pauseBtn.disabled = false;
+    };
+
+    /* 方式三：数组 */
+    // let colors = ["red", "green", "blue", "yellow"];
+    // box.style.backgroundColor = colors[0];
+    // let index = 1;
+    // btn.onclick = function () {
+    //   box.style.backgroundColor = colors[index++ % colors.length];
+    // };
+
+    /* 方式四：循环链表 */
+    // class Color {
+    //   constructor(value) {
+    //     this.value = value;
+    //     this.next = null;
+    //   }
+    // }
+    // let red = new Color("red");
+    // let green = new Color("green");
+    // let blue = new Color("blue");
+    // let yellow = new Color("yellow");
+    // red.next = green;
+    // green.next = blue;
+    // blue.next = yellow;
+    // yellow.next = red;
+    // let head = red;
+
+    // btn.onclick = function () {
+    //   box.style.backgroundColor = head.value;
+    //   head = head.next;
+    // };
+
+    /*------*/
+  </script>
+</html>
