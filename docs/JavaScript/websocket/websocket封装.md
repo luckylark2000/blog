@@ -5,6 +5,21 @@
 
 [CSDN 的一篇使用Promise封装的，基本思路很对，但是代码不太完善](https://blog.csdn.net/weixin_62328265/article/details/146507612)
 
+[告别屎山！！！WebSocket 的极致封装， 写好代码竟如此简单]<https://juejin.cn/post/7220236377937559589>
+
+参考项目：
+
+vueuse的useWebSocket
+
+## 预期功能
+
+- 断网重连
+- 断线重连
+- 超时重连
+- 消息超时
+- 心跳检测
+- 超时重发
+
 ## 初步的设计思路
 
 设计模式使用：
