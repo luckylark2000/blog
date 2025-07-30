@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div>getMessage</div>
+  <script>
+    console.log("原：",window.opener)
+    window.opener.postMessage('hello pppp', 'http://127.0.0.1:5500/')
+
+    window.addEventListener('message', function(e) {
+      console.log(e.source.origin,e.data)
+      document.body.appendChild(document.createTextNode(e.data))
+    })
+  </script>
+</body>
+</html>

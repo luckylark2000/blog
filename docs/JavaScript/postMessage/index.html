@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div>postMessage</div>
+  <button id="open">open</button>
+  <button id="post">post</button>
+  <script>
+    // window.postMessage('hello', 'http://127.0.0.1:5500/')
+    // window.addEventListener('message', function(e) {
+    //   console.log(e.source.origin,e.data)
+    // })
+    let openWindow = null
+    const btn = document.querySelector('#post')
+    
+    
+    const open = document.querySelector('#open')
+    console.log(window.opener)
+    window.addEventListener('message', function(e) {
+      console.log('子',e.data)
+      document.body.appendChild(document.createTextNode(e.data))
+    })
+    open.onclick = function() {
+      console.log('open')
+      openWindow = window.open('./postMessage.html')
+      localStorage.setItem('openWindow', openWindow)
+    }
+
+    btn.onclick = function() {
+      openWindow && openWindow.postMessage('hello', 'http://127.0.0.1:5500/')
+      console.log(window.opener)
+    }
+  </script>
+</body>
+</html>
