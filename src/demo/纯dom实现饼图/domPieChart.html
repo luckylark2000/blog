@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container{
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: conic-gradient(
+        transparent 0deg 2deg,         
+        purple 2deg 152deg,             
+        transparent 152deg 154deg,      
+        rgb(224, 40, 71) 154deg 274deg, 
+        transparent 274deg 276deg,  
+        orange 276deg 326deg,           
+        transparent 326deg 328deg,     
+        yellow 328deg 343deg,           
+        transparent 343deg 345deg,      
+        lightblue 345deg 360deg         
+      );
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .inner-circle{
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background: white;
+      }
+    }
+  </style>
+</head>
+<body>
+  <p>饼图</p>
+  <div class="container">
+    <div class="inner-circle"></div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Fixed SVG Pie Chart</title>
+</head>
+<body>
+
+<svg id="container" width="200" height="200" viewBox="-100 -100 200 200" >
+</svg>
+<script>
+  function polar(cx, cy, r, deg) {
+      const rad = (deg * Math.PI) / 180;
+      return {
+        x: cx + r * Math.cos(rad),
+        y: cy + r * Math.sin(rad)
+      };
+    }
+
+    function createSector(cx, cy, r, startDeg, endDeg, color) {
+      const start = polar(cx, cy, r, startDeg);
+      const end = polar(cx, cy, r, endDeg);
+
+      // 如果跨度 > 180°，large-arc-flag = 1
+      const largeArc = (endDeg - startDeg) > 180 ? 1 : 0;
+
+      // sweep-flag = 1 表示顺时针
+      return `
+        M ${cx} ${cy}
+        L ${start.x} ${start.y}
+        A ${r} ${r} 0 ${largeArc} 1 ${end.x} ${end.y}
+        Z
+      `;
+    }
+
+    // 定义扇形数据（起始角，结束角，颜色）
+    const sectors = [
+      { start: 2,   end: 152,  color: "purple" },
+      { start: 154, end: 274,  color: "rgb(224,40,71)" },
+      { start: 276, end: 326,  color: "orange" },
+      { start: 328, end: 343,  color: "yellow" },
+      { start: 345, end: 360,  color: "lightblue" },
+      // { start: 0,   end: 0,    color: "lightblue" } // 0° 处闭合（360° = 0°）
+    ];
+
+    const svg = document.getElementById("container");
+
+    sectors.forEach(s => {
+      const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+      path.setAttribute("d", createSector(0, 0, 90, s.start, s.end));
+      path.setAttribute("fill", s.color);
+      svg.appendChild(path);
+    });
+
+    // 添加中心白色圆
+    const center = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+    center.setAttribute("cx", 0);
+    center.setAttribute("cy", 0);
+    center.setAttribute("r", 75);
+    center.setAttribute("fill", "white");
+    svg.appendChild(center);
+</script>
+</body>
+</html>
