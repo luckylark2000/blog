@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    :root {
+ --speed: 2ms; 
+}
+
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 10px;
+  text-align: center;
+}
+
+svg {
+  background: #9df;
+  border: 2px #000 solid;
+  width: calc(100% - 0px);
+  max-height: calc(100vh - 20px);
+  max-width: calc(200vh - 40px);
+}
+
+.cloud { 
+  transform: translateX(-750px);
+	animation: ani_cloud 18s linear infinite;
+}
+
+.cloud:nth-of-type(2) { animation-duration: 20s; animation-delay: -12s; }
+.cloud:nth-of-type(3) { animation-duration: 22s; animation-delay: -8s; }
+
+@keyframes ani_cloud {
+  to { transform: translateX(1500px); }
+}
+
+.grass {
+  transform: translateX(0);
+	animation: ani_grass calc(4000 * var(--speed)) linear infinite reverse;
+}
+
+@keyframes ani_grass {
+  to { transform: translateX(-3000px); }
+}
+
+.grassFill {
+  fill: lightgreen;
+  width: 3200px;
+  stroke: none;
+}
+
+.grassLine {
+  fill: none;
+  stroke: green;
+  stroke-width: 25;
+  stroke-linecap: round;
+}
+
+.road {
+  fill: #777;
+  width: calc(100% + 20px);
+  height: 75px;
+}
+
+.roadLine {
+  stroke: #fff;
+  stroke-width: 10;
+  stroke-dasharray: 300 150;
+	stroke-dashoffset: 000; 
+	animation: ani_roadLine calc(450 * var(--speed)) linear infinite reverse;
+}
+
+@keyframes ani_roadLine {
+  to { stroke-dashoffset: 450; }
+}
+
+.roadsideRed {
+  stroke: #f00;
+  stroke-width: 25;
+}
+
+.roadsideWhite {
+  stroke: #fff;
+  stroke-width: 26;
+  stroke-dasharray: 180;
+	stroke-dashoffset: 0; 
+	animation: ani_roadsideWhite calc(360 * var(--speed)) linear infinite reverse;
+}
+
+@keyframes ani_roadsideWhite {
+  to { stroke-dashoffset: 360; }
+}
+
+.roadsideDark {
+  stroke: rgba(0,0,0,0.25);
+  stroke-width: 6;
+}
+
+.carBody {
+  transform-origin: 1250px 750px;
+  transform: translateY(0) rotate(0);
+	animation: ani_car 250ms ease-in-out alternate infinite ;
+}
+
+@keyframes ani_car {
+  to { transform: translateY(0.5px) rotate(0.25deg); }
+}
+
+.carBlue {
+  fill: darkblue;
+  stroke: none;
+}
+
+.carLine {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 16px;
+  stroke-linecap: round;
+}
+
+.carPart {
+  fill: #fff;
+  stroke: none;
+}
+
+.carBack {
+  fill: #333;
+  stroke: none;
+}
+
+.carWindow {
+  stroke: #fff;
+  stroke-width: 3;
+  fill: #fff7;
+  }
+
+.wheel {
+}
+
+.wheelOut {
+  stroke: #222;
+  stroke-width: 30px;
+  fill: #aaa;
+}
+
+.wheelMid1 {
+	transform-origin: 500px 630px;
+}
+
+.wheelMid2 {
+	transform-origin: 1000px 630px;
+}
+.wheelMid1, .wheelMid2 {
+  animation: ani_wheelMid calc(628 * var(--speed)) linear infinite reverse;
+  fill: #111;
+}
+
+.wheelMid1:nth-of-type(2), .wheelMid2:nth-of-type(2) { animation-delay: calc((-628 / 5) * var(--speed)); }
+.wheelMid1:nth-of-type(3), .wheelMid2:nth-of-type(3) { animation-delay: calc((-1256 / 5) * var(--speed)); }
+.wheelMid1:nth-of-type(4), .wheelMid2:nth-of-type(4) { animation-delay: calc((-1884/ 5) * var(--speed)); }
+.wheelMid1:nth-of-type(5), .wheelMid2:nth-of-type(5) { animation-delay: calc((-2512 / 5) * var(--speed)); }
+
+@keyframes ani_wheelMid {
+  to { transform: rotate(360deg); }
+}
+
+.wheelGray {
+  stroke: #aaa;
+  stroke-width: 7px;
+  fill: none;
+}
+
+.wheelCenter {
+  stroke: #222;
+  stroke-width: 10px;
+  fill: #aaa;
+}
+
+.smokeRing {
+  --smokeSpeed: 2s; 
+  opacity: 0; 
+  transform: translate(-15px, 15px);
+	animation: ani_smoke1 var(--smokeSpeed) linear infinite ;
+}
+
+.smokeRing:nth-of-type(2)  { animation-delay: calc(0.15 * var(--smokeSpeed)); }
+.smokeRing:nth-of-type(3)  { animation-delay: calc(0.20 * var(--smokeSpeed)); }
+.smokeRing:nth-of-type(4)  { animation-delay: calc(0.35 * var(--smokeSpeed)); }
+.smokeRing:nth-of-type(5)  { animation-delay: calc(0.40 * var(--smokeSpeed)); }
+.smokeRing:nth-of-type(6)  { animation-delay: calc(0.55 * var(--smokeSpeed)); }
+.smokeRing:nth-of-type(7)  { animation-delay: calc(0.60 * var(--smokeSpeed)); }
+.smokeRing:nth-of-type(8)  { animation-delay: calc(0.75 * var(--smokeSpeed)); }
+.smokeRing:nth-of-type(9)  { animation-delay: calc(0.80 * var(--smokeSpeed)); }
+.smokeRing:nth-of-type(10) { animation-delay: calc(0.95 * var(--smokeSpeed)); }
+
+@keyframes ani_smoke1 {
+  15% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(500px, -100px);
+  }
+}
+
+.birdCont {
+  
+}
+
+.birdBody {
+  stroke: none;
+  fill: #b7b;
+}
+
+.birdEye,
+.birdBeak,
+.birdWing {
+  stroke: none;
+  fill: #700;
+}
+
+.birdWing {
+	transform: rotate(-5deg);
+	transform-origin: 1800px 200px;
+  animation: ani_birdWing 100ms ease-in-out alternate infinite ;
+}
+
+@keyframes ani_birdWing {
+  to { transform: rotate(5deg); }
+}
+
+.birdBeak.top {
+	transform-origin: 1760px 150px;
+  animation: ani_birdBeaktop 1.5s ease-in-out infinite ;
+}
+
+@keyframes ani_birdBeaktop {
+  0%, 25%, 50% { transform: rotate(0deg); }
+  12.5%, 37.5% { transform: rotate(10deg); }
+}
+
+.birdBeak.bot {
+	transform-origin: 1760px 150px;
+  animation: ani_birdBeakbot 1.5s ease-in-out infinite ;
+}
+
+@keyframes ani_birdBeakbot {
+  0%, 25%, 50% { transform: rotate(0deg); }
+  12.5%, 37.5% { transform: rotate(-25deg); }
+}
+
+.birdCont {
+  transform: translateX(400px);
+  animation: ani_birdCont 20000ms linear infinite;
+}
+
+@keyframes ani_birdCont {
+  to { transform: translateX(-1400px); }
+}
+
+.bird {
+  transform: translateY(0) scale(0.7);
+  animation: ani_birdBody 500ms ease-out alternate infinite;
+}
+
+@keyframes ani_birdBody {
+  to { transform: translateY(-50px) scale(0.7); }
+}
+
+  </style>
+</head>
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewbox="0 0 1500 750">
+      
+  <g class="Clouds">
+    <defs>
+      <radialGradient id="cloud1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+        <stop offset="0%" style="stop-color:#fff; stop-opacity:0.75" />
+        <stop offset="100%" style="stop-color:#fff ;stop-opacity:0" />
+      </radialGradient>
+    </defs>
+
+    <g class="cloud">
+      <ellipse cx="200" cy="150" rx="150" ry="100" fill="url(#cloud1)" />
+      <ellipse cx="300" cy="130" rx="150" ry="100" fill="url(#cloud1)" />
+      <ellipse cx="400" cy="170" rx="150" ry="100" fill="url(#cloud1)" />
+      <ellipse cx="500" cy="140" rx="150" ry="100" fill="url(#cloud1)" />
+      <ellipse cx="600" cy="160" rx="150" ry="100" fill="url(#cloud1)" />
+    </g>
+    <g class="cloud">
+      <ellipse cx="200" cy="100" rx="150" ry="100" fill="url(#cloud1)" />
+      <ellipse cx="300" cy="80" rx="150" ry="100" fill="url(#cloud1)" />
+      <ellipse cx="400" cy="120" rx="150" ry="100" fill="url(#cloud1)" />
+      <ellipse cx="500" cy="90" rx="150" ry="100" fill="url(#cloud1)" />
+      <ellipse cx="600" cy="110" rx="150" ry="100" fill="url(#cloud1)" />
+    </g>
+    <g class="cloud">
+      <ellipse cx="200" cy="200" rx="150" ry="100" fill="url(#cloud1)" />
+      <ellipse cx="300" cy="180" rx="150" ry="100" fill="url(#cloud1)" />
+      <ellipse cx="400" cy="220" rx="150" ry="100" fill="url(#cloud1)" />
+      <ellipse cx="500" cy="190" rx="150" ry="100" fill="url(#cloud1)" />
+      <ellipse cx="600" cy="210" rx="150" ry="100" fill="url(#cloud1)" />
+    </g>
+  </g>
+  
+  <g class="grass">
+    <path class="grassFill" d="M -200 350 q 200 -100 400 0 V 750 H 0 z
+                               M 120 400 q 200 -150 500 0 V 750 H 0 z
+                               M 400 325 q 300 -100 600 0 V 750 H 0 z
+                               M 900 365 q 200 -100 500 0 V 750 H 0 z
+                               M 1350 390 q 200 -100 500 0 V 750 H 0 z
+                               M 1800 425 q 200 -150 400 0 V 750 H 0 z
+                               M 2150 390 q 300 -50 500 0 V 750 H 0 z
+                               M 2600 375 q 100 -120 230 -40 V 750 H 0 z
+                               M 2800 350 q 200 -100 400 0 V 750 H 0 z
+                               M 3120 400 q 200 -150 500 0 V 750 H 0 z
+                               M 3400 325 q 300 -100 600 0 V 750 H 0 z
+                               M 3900 365 q 200 -100 500 0 V 750 H 0 z
+                               M 4350 390 q 200 -100 500 0 V 750 H 0 z"/>
+
+    <path class="grassLine" d="M -200 350 q 200 -100 400 0 
+                               M 120 400 q 200 -150 500 0 
+                               M 400 325 q 300 -100 600 0 
+                               M 900 365 q 200 -100 500 0 
+                               M 1350 390 q 200 -100 500 0 
+                               M 1800 425 q 200 -150 400 0 
+                               M 2150 390 q 300 -50 500 0 
+                               M 2600 375 q 100 -120 230 -40 
+                               M 2800 350 q 200 -100 400 0 
+                               M 3120 400 q 200 -150 500 0 
+                               M 3400 325 q 300 -100 600 0
+                               M 3900 365 q 200 -100 500 0
+                               M 4350 390 q 200 -100 500 0 "/> 
+  </g>
+
+  <rect class="road" x="-10" y="675" />
+  <line class="roadLine" x1="-10" y1="705" x2="1510" y2="705" />
+
+  <line class="roadsideRed" x1="-10" y1="665" x2="1510" y2="665" />
+  <line class="roadsideWhite" x1="-10" y1="665" x2="1510" y2="665" />
+  <line class="roadsideDark" x1="-10" y1="655" x2="1510" y2="655" /> 
+  
+  <g class="car">
+
+        <g class="smoke">
+
+      <defs>
+        <radialGradient id="Smoke" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+          <stop offset="0%" style="stop-color:#aaa; stop-opacity: 0.75" />
+          <stop offset="100%" style="stop-color:#555 ;stop-opacity:0" />
+        </radialGradient>
+      </defs>
+
+      <ellipse class="smokeRing" cx="1120" cy="570" rx="110" ry="100" fill="url(#Smoke)" />
+      <ellipse class="smokeRing" cx="1120" cy="590" rx="120" ry="100" fill="url(#Smoke)" />
+      <ellipse class="smokeRing" cx="1120" cy="560" rx="130" ry="100" fill="url(#Smoke)" />
+      <ellipse class="smokeRing" cx="1120" cy="580" rx="140" ry="100" fill="url(#Smoke)" />
+      <ellipse class="smokeRing" cx="1120" cy="550" rx="150" ry="100" fill="url(#Smoke)" />
+      <ellipse class="smokeRing" cx="1120" cy="575" rx="160" ry="100" fill="url(#Smoke)" />
+      <ellipse class="smokeRing" cx="1120" cy="595" rx="150" ry="100" fill="url(#Smoke)" />
+      <ellipse class="smokeRing" cx="1120" cy="565" rx="140" ry="100" fill="url(#Smoke)" />
+      <ellipse class="smokeRing" cx="1120" cy="585" rx="130" ry="100" fill="url(#Smoke)" />
+      <ellipse class="smokeRing" cx="1120" cy="555" rx="120" ry="100" fill="url(#Smoke)" />
+   
+    </g>
+
+    <g class="carBody">
+
+      <path class="carBlue" d="M 610 660
+                               c 20 -190 -250 -180 -215 0
+                               h -10
+                               c -20 -0 -10 -120 10 -120
+                               c -20 0 0 -95 100 -95
+                               l 170 -130
+                               q 40 -30 150 -30
+                               v 35
+                               q -110 -10 -150 30
+                               l -140 115
+                               l 330 -35
+                               q 20 -35 65 -35
+                               l -15 -40
+                               c -20 -35 -40 -35 -90 -35
+                               v -35
+                               c 220 0 220 15 210 30
+                               q 50 70 60 140
+                               v 40
+                               q 30 55 30 110
+                               h -10
+                               c -20 -125 -240 -115 -210 55
+                               z" />
+
+      <path class="carLine" d="M 615 640
+                               l 200 -25
+                               q 25 0 50 -35
+                               l 105 -160
+                               q 25 -35 50 -35
+                               l 40 -5                             
+                               " />
+      
+      <path class="carPart" d="M 410 530
+                               q -10 0 -10 -10
+                               c 0 0 0 -55 80 -65
+                               q 10 0 10 10
+                               q -20 40 -80 65
+                               z" />    
+
+      <path class="carPart" d="M 1060 400
+                               q 10 15 0 30
+                               q -10 0 -20 -10
+                               v -10
+                               q 10 -10 20 -10
+                               " />    
+      
+      <path class="carPart" d="M 1065 440
+                               q 10 15 0 30
+                               q -10 0 -20 -10
+                               v -10
+                               q 10 -10 20 -10
+                               " />    
+
+      <path class="carBack" d="M 1115 560
+                               q 10 15 5 30
+                               q -10 0 -20 -10
+                               v -10
+                               q 10 -10 15 -10
+                               " />    
+
+      <path class="carWindow" d="M 815 320
+                                 q -110 -10 -150 30
+                                 l -140 115
+                                 l 330 -35
+                                 q 20 -35 65 -35
+                                 l -15 -40
+                                 c -20 -35 -40 -35 -90 -35
+                                 z" />     
+    </g>
+
+    <g class="wheel">
+
+      <circle class="wheelOut" cx="500" cy="630" r="85" />
+
+      <path class="wheelMid1" d="M 490 600 h 20 l 20 -40 h -60 z" />
+      <path class="wheelMid1" d="M 490 600 h 20 l 20 -40 h -60 z" />
+      <path class="wheelMid1" d="M 490 600 h 20 l 20 -40 h -60 z" />
+      <path class="wheelMid1" d="M 490 600 h 20 l 20 -40 h -60 z" />
+      <path class="wheelMid1" d="M 490 600 h 20 l 20 -40 h -60 z" />
+
+      <circle class="wheelGray" cx="500" cy="630" r="72" />
+      <circle class="wheelCenter" cx="500" cy="630" r="20" />
+
+    </g>
+
+    <g class="wheel">
+
+      <circle class="wheelOut" cx="1000" cy="630" r="85" />
+
+      <path class="wheelMid2" d="M 990 600 h 20 l 20 -40 h -60 z" />
+      <path class="wheelMid2" d="M 990 600 h 20 l 20 -40 h -60 z" />
+      <path class="wheelMid2" d="M 990 600 h 20 l 20 -40 h -60 z" />
+      <path class="wheelMid2" d="M 990 600 h 20 l 20 -40 h -60 z" />
+      <path class="wheelMid2" d="M 990 600 h 20 l 20 -40 h -60 z" />
+
+      <circle class="wheelGray" cx="1000" cy="630" r="72" />
+      <circle class="wheelCenter" cx="1000" cy="630" r="20" />
+
+    </g>
+  </g>
+  
+  <g class="birdCont">
+    <g class="bird">
+
+      <path class="birdBody" d="M 1750 150
+                                c 0 150 200 150 200 0
+                                c 0 20 -80 20 -100 0
+                                c -40 -40 -60 -40 -100 0
+                                 " /> 
+
+      <circle class="birdEye" cx="1790" cy="150" r="7" />
+
+      <path class="birdBeak top" d="M 1760 150 l 5 -10 l -35  10 z " /> 
+      <path class="birdBeak bot" d="M 1760 150 l 5  10 l -30 -10 z " /> 
+
+      <path class="birdWing" d="M 1800 200 c 150 -120 150 120 0 0 " /> 
+
+    </g>
+  </g>
+</svg>
+</body>
+</html>
