@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+  <style>
+    html{
+      font-size: 16px;
+    }
+    .container1{
+      display: flex;
+      width: 100px;
+      height: 100px;
+      background-color: if(media(max-width: 600px): red; else: blue);
+      gap: if(supports(gap: 10px): 10px; else: 0);
+    }
+    .container2{
+      display: flex;
+      width: 100px;
+      height: 100px;
+    }
+    .box {
+      color: var(--color);
+      
+      
+    }
+    .dark {
+          --color: white;
+      }
+      .light {
+          --color: black;
+      }
+    
+  </style>
+</head>
+<body>
+  <div class="container1">if
+    <div class="item">item</div>
+    <div class="item">item</div>
+  </div>
+  <div class="container2">
+    <div  class="dark box">dark</div>
+    <div class="light box">light</div>
+  </div>
+  <script type="module">
+    // 在火狐上测得，稍微优点问题，浏览器直接卡死
+    // import {init} from 'https://cdn.jsdelivr.net/npm/css-if-polyfill/dist/index.modern.js?module';
+    // const polyfill = init({
+    //   // debug: true,
+    //   // autoInit: true
+    // });
+  </script>
+</body>
+</html>
