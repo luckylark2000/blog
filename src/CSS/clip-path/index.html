@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        width: 200px;
+        height: 200px;
+        background-color: antiquewhite;
+        clip-path: path(
+          "M 10,40 L 70,40 A 10,10 0,0,0 80,30 L80,10 A10,10 0,0,1 90,0 L 140,0 A 10,10 0,0,1 150,10 L 150,190 A 10,10 0,0,1 140,200 L 10,200 A 10,10 0,0,1 0,190 L 0,50 A 10,10 0,0,1 10,40 Z"
+        );
+        transition: 0.5s;
+        &:hover {
+          background-color: red;
+          cursor: pointer;
+        }
+      }
+      .arrow {
+        display: flex;
+        li {
+          list-style: none;
+          height: 20px;
+          width: 40px;
+          background-color: red;
+          text-align: center;
+          cursor: pointer;
+          clip-path: path("M 0,0 L 30,0 L 40,10 L 30,20 L 0,20 L 10,10 Z");
+          &:hover {
+            background-color: blueviolet;
+          }
+        }
+        :not(:first-child) {
+          margin-left: -9px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container"></div>
+    <div class="arrow">
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+    </div>
+  </body>
+</html>
