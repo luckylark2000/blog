@@ -1,0 +1,24 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "words": [
+    "anticon",
+    "commitlint",
+    "leetcode",
+    "luckylark",
+    "mousedown",
+    "mouseleave",
+    "nums",
+    "readline",
+    "strs",
+    "stylelint",
+    "tada",
+    "uniapp",
+    "vitepress",
+    "vnodes",
+    "vnode",
+    "Vuex"
+  ],
+  "flagWords": [],
+  "ignorePaths": ["node_modules", "dist", "build", ".git"]
+}
