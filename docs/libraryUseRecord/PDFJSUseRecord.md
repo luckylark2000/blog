@@ -52,6 +52,8 @@ pageView.setPdfPage(page)
 pageView.draw()
 ```
 
+需要引入 pdf.worker.js 并且 webpack 的话需要 worker-loader 来处理 worker，Vite的话是直接支持的。
+
 ## 实战参考项目
 
 基于PDFJS-DIST + CANVAS的PDF模板签字盖章定位工具
