@@ -1,1 +1,22 @@
-{}
+{
+  "editor.formatOnSave": true,
+  "autocorrect.enable": true,
+  "autocorrect.enableLint": true,
+  "autocorrect.formatOnSave": true,
+  "[markdown]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "editor.defaultFormatter": "huacnlee.auto-correct"
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.markdownlint": "explicit"
+  },
+  "[json]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}
