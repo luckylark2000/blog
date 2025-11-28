@@ -40,7 +40,7 @@
   - 如果你的 PR 是新增 API 功能，应提交到 `minor` 分支。
   - 其他情况应提交到 `main` 分支。
 
-- [请务必勾选 “Allow edits from maintainers”（允许维护者编辑）选项](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/allowing-changes-to-a-pull-request-branch-created-from-a-fork)。这允许我们直接进行小幅编辑或重构，节省大量时间。
+- [请务必勾选“Allow edits from maintainers”（允许维护者编辑）选项](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/allowing-changes-to-a-pull-request-branch-created-from-a-fork)。这允许我们直接进行小幅编辑或重构，节省大量时间。
 
 - 如果是新增功能：
   - 添加相应的测试用例。
@@ -55,7 +55,7 @@
 
 - 确保所有测试通过！
 
-- 提交信息必须遵循 [提交信息规范](./commit-convention.md)，以便自动生成 changelog。每次提交前会自动验证提交信息格式（通过 [simple-git-hooks](https://github.com/toplenboren/simple-git-hooks) 调用 [Git Hooks](https://git-scm.com/docs/githooks)）。
+- 提交信息必须遵循 [提交信息规范]，以便自动生成 changelog。每次提交前会自动验证提交信息格式（通过 [simple-git-hooks](https://github.com/toplenboren/simple-git-hooks) 调用 [Git Hooks](https://git-scm.com/docs/githooks)）。
 
 - 无需担心代码风格，只要你安装了开发依赖——在提交时，修改的文件会通过 Prettier 自动格式化（同样由 simple-git-hooks 触发）。
 
