@@ -1,0 +1,38 @@
+{
+  "text": "VSCode",
+  "collapsed": true,
+  "items": [
+    {
+      "text": "VSCode关于Git的settings和插件",
+      "link": "/VSCode/VSCode关于Git的settings和插件"
+    },
+    {
+      "text": "vscode1.106更新总结和实用配置推荐",
+      "link": "/VSCode/vscode1.106更新总结和实用配置推荐"
+    },
+    {
+      "text": "vscodePlugins",
+      "link": "/VSCode/vscodePlugins"
+    },
+    {
+      "text": "vscode从1.92版本开始去除了incoming和outgoing替代方案",
+      "link": "/VSCode/vscode从1.92版本开始去除了incoming和outgoing替代方案"
+    },
+    {
+      "text": "vscode开启fileNesting支持文件折叠达到分类的效果",
+      "link": "/VSCode/vscode开启fileNesting支持文件折叠达到分类的效果"
+    },
+    {
+      "text": "vscode相关学习资料整理",
+      "link": "/VSCode/vscode相关学习资料整理"
+    },
+    {
+      "text": "多重光标多位置编辑",
+      "link": "/VSCode/多重光标多位置编辑"
+    },
+    {
+      "text": "新版vscode去除快捷键显示Copilot的AI对话框功能",
+      "link": "/VSCode/新版vscode去除快捷键显示Copilot的AI对话框功能"
+    }
+  ]
+}

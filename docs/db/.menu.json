@@ -1,0 +1,20 @@
+{
+  "text": "db",
+  "collapsed": true,
+  "items": [
+    {
+      "text": "postgresql",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "PG数据库学习资料整理",
+          "link": "/db/postgresql/PG数据库学习资料整理"
+        },
+        {
+          "text": "为什么要学习postgresql",
+          "link": "/db/postgresql/为什么要学习postgresql"
+        }
+      ]
+    }
+  ]
+}

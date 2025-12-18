@@ -1,0 +1,42 @@
+{
+  "text": "Test",
+  "collapsed": true,
+  "items": [
+    {
+      "text": "PlayWright",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "palywight快速开始入门",
+          "link": "/Test/PlayWright/palywight快速开始入门"
+        },
+        {
+          "text": "playwright中如何模拟websocket",
+          "link": "/Test/PlayWright/playwright中如何模拟websocket"
+        },
+        {
+          "text": "playwright在use里面设置的配置不生效怎么处理",
+          "link": "/Test/PlayWright/playwright在use里面设置的配置不生效怎么处理"
+        },
+        {
+          "text": "playwright处理组件库文件上传组件input的display为none怎么处理上传逻辑",
+          "link": "/Test/PlayWright/playwright处理组件库文件上传组件input的display为none怎么处理上传逻辑"
+        },
+        {
+          "text": "playwright常见问题梳理",
+          "link": "/Test/PlayWright/playwright常见问题梳理"
+        }
+      ]
+    },
+    {
+      "text": "vitest",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "Vitest基本使用",
+          "link": "/Test/vitest/Vitest基本使用"
+        }
+      ]
+    }
+  ]
+}

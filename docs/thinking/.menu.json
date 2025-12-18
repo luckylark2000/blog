@@ -1,0 +1,36 @@
+{
+  "text": "thinking",
+  "collapsed": true,
+  "items": [
+    {
+      "text": "学习探索123",
+      "link": "/thinking/学习探索123"
+    },
+    {
+      "text": "知道的越多越胆小还是知道的越多越胆大",
+      "link": "/thinking/知道的越多越胆小还是知道的越多越胆大"
+    },
+    {
+      "text": "学习的本质",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "学习的本质之体验与实践",
+          "link": "/thinking/学习的本质/学习的本质之体验与实践"
+        },
+        {
+          "text": "学习的本质之情感和上下文",
+          "link": "/thinking/学习的本质/学习的本质之情感和上下文"
+        },
+        {
+          "text": "学习的本质之直觉与顿悟",
+          "link": "/thinking/学习的本质/学习的本质之直觉与顿悟"
+        },
+        {
+          "text": "学习的本质之组合技",
+          "link": "/thinking/学习的本质/学习的本质之组合技"
+        }
+      ]
+    }
+  ]
+}

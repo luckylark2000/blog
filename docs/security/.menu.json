@@ -1,0 +1,42 @@
+{
+  "text": "安全security",
+  "collapsed": true,
+  "items": [
+    {
+      "text": "CSRF攻击",
+      "link": "/security/CSRF攻击"
+    },
+    {
+      "text": "前端漏洞处理",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "DOM-XSS",
+          "link": "/security/FrontEndVulnerability/DOM-XSS"
+        },
+        {
+          "text": "ElementPlus漏洞整理",
+          "link": "/security/FrontEndVulnerability/ElementPlus漏洞整理"
+        },
+        {
+          "text": "软件库漏洞来源整理",
+          "link": "/security/FrontEndVulnerability/软件库漏洞来源整理"
+        },
+        {
+          "text": "Axios漏洞",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "2025Axios高危漏洞CVE-2025-58754分析",
+              "link": "/security/FrontEndVulnerability/AxiosVulnerability/2025Axios高危漏洞CVE-2025-58754分析"
+            },
+            {
+              "text": "Axios漏洞整理",
+              "link": "/security/FrontEndVulnerability/AxiosVulnerability/Axios漏洞整理"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

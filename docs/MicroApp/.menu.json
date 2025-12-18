@@ -1,0 +1,18 @@
+{
+  "text": "MicroApp",
+  "collapsed": true,
+  "items": [
+    {
+      "text": "DifferenceBetweenUmd_CommomJS_ESM",
+      "link": "/MicroApp/DifferenceBetweenUmd_CommomJS_ESM"
+    },
+    {
+      "text": "train",
+      "link": "/MicroApp/train"
+    },
+    {
+      "text": "集成Vue2子系统遇到的问题",
+      "link": "/MicroApp/集成Vue2子系统遇到的问题"
+    }
+  ]
+}

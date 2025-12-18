@@ -1,0 +1,34 @@
+{
+  "text": "ArchitectThinking",
+  "collapsed": true,
+  "items": [
+    {
+      "text": "axios的拦截器应该放在axios上还是axios.create的实例上",
+      "link": "/ArchitectThinking/axios的拦截器应该放在axios上还是axios.create的实例上"
+    },
+    {
+      "text": "主流开源许可协议的对比",
+      "link": "/ArchitectThinking/主流开源许可协议的对比"
+    },
+    {
+      "text": "前端token存储方案探讨和选择",
+      "link": "/ArchitectThinking/前端token存储方案探讨和选择"
+    },
+    {
+      "text": "前端内功心法",
+      "link": "/ArchitectThinking/前端内功心法"
+    },
+    {
+      "text": "究竟怎样的表格筛选组件的封装是好的",
+      "link": "/ArchitectThinking/究竟怎样的表格筛选组件的封装是好的"
+    },
+    {
+      "text": "端到端测试dom的test-id设计思考",
+      "link": "/ArchitectThinking/端到端测试dom的test-id设计思考"
+    },
+    {
+      "text": "项目文档工具如何选择",
+      "link": "/ArchitectThinking/项目文档工具如何选择"
+    }
+  ]
+}

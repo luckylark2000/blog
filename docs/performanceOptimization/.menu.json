@@ -1,0 +1,18 @@
+{
+  "text": "performanceOptimization",
+  "collapsed": true,
+  "items": [
+    {
+      "text": "cssOptimization",
+      "link": "/performanceOptimization/cssOptimization"
+    },
+    {
+      "text": "加快网页加载速度方案",
+      "link": "/performanceOptimization/加快网页加载速度方案"
+    },
+    {
+      "text": "网络层面的优化",
+      "link": "/performanceOptimization/网络层面的优化"
+    }
+  ]
+}

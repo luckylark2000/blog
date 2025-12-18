@@ -1,0 +1,66 @@
+{
+  "text": "JobProblems",
+  "collapsed": true,
+  "items": [
+    {
+      "text": "VueConfigProxy",
+      "link": "/JobProblems/VueConfigProxy"
+    },
+    {
+      "text": "bli问题记录及其解决方案",
+      "link": "/JobProblems/bli问题记录及其解决方案"
+    },
+    {
+      "text": "element-plus使用问题记录",
+      "link": "/JobProblems/element-plus使用问题记录"
+    },
+    {
+      "text": "htmlCache",
+      "link": "/JobProblems/htmlCache"
+    },
+    {
+      "text": "lockfile",
+      "link": "/JobProblems/lockfile"
+    },
+    {
+      "text": "oneRegThinking",
+      "link": "/JobProblems/oneRegThinking"
+    },
+    {
+      "text": "recordNodeUpgrade",
+      "link": "/JobProblems/recordNodeUpgrade"
+    },
+    {
+      "text": "vueuse使用问题记录",
+      "link": "/JobProblems/vueuse使用问题记录"
+    },
+    {
+      "text": "windowOpenWasIntercepted",
+      "link": "/JobProblems/windowOpenWasIntercepted"
+    },
+    {
+      "text": "下拉框数据提交后回显名称不对",
+      "link": "/JobProblems/下拉框数据提交后回显名称不对"
+    },
+    {
+      "text": "前端性能优化",
+      "link": "/JobProblems/前端性能优化"
+    },
+    {
+      "text": "双容器问题解决",
+      "link": "/JobProblems/双容器问题解决"
+    },
+    {
+      "text": "图片加载优化方案",
+      "link": "/JobProblems/图片加载优化方案"
+    },
+    {
+      "text": "如何解决倒计时不准确的情况",
+      "link": "/JobProblems/如何解决倒计时不准确的情况"
+    },
+    {
+      "text": "纯dom和svg实现饼图",
+      "link": "/JobProblems/纯dom和svg实现饼图"
+    }
+  ]
+}

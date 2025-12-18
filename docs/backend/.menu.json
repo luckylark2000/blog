@@ -1,0 +1,16 @@
+{
+  "text": "backend",
+  "collapsed": true,
+  "items": [
+    {
+      "text": "java",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "maven",
+          "link": "/backend/java/maven"
+        }
+      ]
+    }
+  ]
+}

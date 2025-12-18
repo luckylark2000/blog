@@ -1,0 +1,80 @@
+{
+  "text": "JavaScript",
+  "collapsed": true,
+  "items": [
+    {
+      "text": "CloseAnOpenedWindow",
+      "link": "/JavaScript/CloseAnOpenedWindow"
+    },
+    {
+      "text": "DragableSort",
+      "link": "/JavaScript/DragableSort"
+    },
+    {
+      "text": "PromiseLearn",
+      "link": "/JavaScript/PromiseLearn"
+    },
+    {
+      "text": "WeakSet",
+      "link": "/JavaScript/WeakSet"
+    },
+    {
+      "text": "ajax",
+      "link": "/JavaScript/ajax"
+    },
+    {
+      "text": "crossAera",
+      "link": "/JavaScript/crossAera"
+    },
+    {
+      "text": "storage",
+      "link": "/JavaScript/storage"
+    },
+    {
+      "text": "词法作用域和作用域链和执行上下文",
+      "link": "/JavaScript/词法作用域和作用域链和执行上下文"
+    },
+    {
+      "text": "postMessage",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "postMessage的使用",
+          "link": "/JavaScript/postMessage/postMessage的使用"
+        }
+      ]
+    },
+    {
+      "text": "websocket",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "websocket封装",
+          "link": "/JavaScript/websocket/websocket封装"
+        },
+        {
+          "text": "带有重试机制的websocket思考",
+          "link": "/JavaScript/websocket/带有重试机制的websocket思考"
+        }
+      ]
+    },
+    {
+      "text": "闭包从入门到精通",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "deepseek设计的以战带练学习路线",
+          "link": "/JavaScript/闭包从入门到精通/deepseek设计的以战带练学习路线"
+        },
+        {
+          "text": "学习总结",
+          "link": "/JavaScript/闭包从入门到精通/学习总结"
+        },
+        {
+          "text": "通义设计的学习路线",
+          "link": "/JavaScript/闭包从入门到精通/通义设计的学习路线"
+        }
+      ]
+    }
+  ]
+}

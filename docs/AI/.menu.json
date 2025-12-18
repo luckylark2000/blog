@@ -1,0 +1,44 @@
+{
+  "text": "AI",
+  "collapsed": true,
+  "items": [
+    {
+      "text": "AI时代如何用快速学习源码",
+      "link": "/AI/AI时代如何用快速学习源码"
+    },
+    {
+      "text": "AI智能体应用想法",
+      "link": "/AI/AI智能体应用想法"
+    },
+    {
+      "text": "ClaudeCode中使用mcp整理",
+      "link": "/AI/ClaudeCode中使用mcp整理"
+    },
+    {
+      "text": "Claude演示文稿",
+      "link": "/AI/Claude演示文稿"
+    },
+    {
+      "text": "ai智能体项目收集",
+      "link": "/AI/ai智能体项目收集"
+    },
+    {
+      "text": "大模型汇总整理",
+      "link": "/AI/大模型汇总整理"
+    },
+    {
+      "text": "LangChain",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "langchain1.1更新总结",
+          "link": "/AI/LangChain/langchain1.1更新总结"
+        },
+        {
+          "text": "在LangChainjs中使用DeepSeek大模型快速搭建入门项目",
+          "link": "/AI/LangChain/在LangChainjs中使用DeepSeek大模型快速搭建入门项目"
+        }
+      ]
+    }
+  ]
+}

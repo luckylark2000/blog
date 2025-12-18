@@ -1,0 +1,18 @@
+{
+  "text": "electron",
+  "collapsed": true,
+  "items": [
+    {
+      "text": "basic",
+      "link": "/electron/basic"
+    },
+    {
+      "text": "electron-vite-project",
+      "link": "/electron/electron-vite-project"
+    },
+    {
+      "text": "engineer-environment-config",
+      "link": "/electron/engineer-environment-config"
+    }
+  ]
+}

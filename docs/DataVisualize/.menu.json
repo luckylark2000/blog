@@ -1,0 +1,20 @@
+{
+  "text": "DataVisualize",
+  "collapsed": true,
+  "items": [
+    {
+      "text": "ECharts",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "VisualMapAddTitle",
+          "link": "/DataVisualize/ECharts/VisualMapAddTitle"
+        },
+        {
+          "text": "带有渐变色的柱状图",
+          "link": "/DataVisualize/ECharts/带有渐变色的柱状图"
+        }
+      ]
+    }
+  ]
+}

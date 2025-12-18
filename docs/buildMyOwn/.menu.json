@@ -1,0 +1,14 @@
+{
+  "text": "buildMyOwn",
+  "collapsed": true,
+  "items": [
+    {
+      "text": "MyOwnCLI",
+      "link": "/buildMyOwn/MyOwnCLI"
+    },
+    {
+      "text": "buildMyOwnProjectToSignPDF",
+      "link": "/buildMyOwn/buildMyOwnProjectToSignPDF"
+    }
+  ]
+}

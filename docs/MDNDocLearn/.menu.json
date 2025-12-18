@@ -1,0 +1,16 @@
+{
+  "text": "MDNDocLearn",
+  "collapsed": true,
+  "items": [
+    {
+      "text": "WebAPI",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "EventTarget",
+          "link": "/MDNDocLearn/WebAPI/EventTarget"
+        }
+      ]
+    }
+  ]
+}

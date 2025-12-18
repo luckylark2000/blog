@@ -1,0 +1,42 @@
+{
+  "text": "design-pattern",
+  "collapsed": true,
+  "items": [
+    {
+      "text": "UMLClassGraph",
+      "link": "/design-pattern/UMLClassGraph"
+    },
+    {
+      "text": "basicOOP",
+      "link": "/design-pattern/basicOOP"
+    },
+    {
+      "text": "design-principle",
+      "link": "/design-pattern/design-principle"
+    },
+    {
+      "text": "factory-pattern",
+      "link": "/design-pattern/factory-pattern"
+    },
+    {
+      "text": "iterator-pattern",
+      "link": "/design-pattern/iterator-pattern"
+    },
+    {
+      "text": "observer-pattern",
+      "link": "/design-pattern/observer-pattern"
+    },
+    {
+      "text": "proxy-pattern",
+      "link": "/design-pattern/proxy-pattern"
+    },
+    {
+      "text": "release-subscribe-pattern",
+      "link": "/design-pattern/release-subscribe-pattern"
+    },
+    {
+      "text": "singleton-pattern",
+      "link": "/design-pattern/singleton-pattern"
+    }
+  ]
+}

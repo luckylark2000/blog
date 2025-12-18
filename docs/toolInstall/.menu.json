@@ -1,0 +1,18 @@
+{
+  "text": "toolInstall",
+  "collapsed": true,
+  "items": [
+    {
+      "text": "Draw.io",
+      "link": "/toolInstall/Draw.io"
+    },
+    {
+      "text": "installMermaidInVitepress",
+      "link": "/toolInstall/installMermaidInVitepress"
+    },
+    {
+      "text": "windows中安装just工具",
+      "link": "/toolInstall/windows中安装just工具"
+    }
+  ]
+}

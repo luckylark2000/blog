@@ -1,0 +1,60 @@
+{
+  "isRoot": true,
+  "rootItems": [
+    {
+      "text": "简介",
+      "collapsed": false,
+      "items": [
+        {
+          "text": "自我介绍",
+          "link": "/introduce"
+        },
+        {
+          "text": "博客导航汇总",
+          "link": "/content"
+        }
+      ]
+    }
+  ],
+  "categories": [
+    "Vue",
+    "AI",
+    "ArchitectThinking",
+    "JobProblems",
+    "FrontEndEngineering",
+    "problemSolve",
+    "MicroApp",
+    "design-pattern",
+    "DataVisualize",
+    "CSS",
+    "Canvas",
+    "Git",
+    "JavaScript",
+    "security",
+    "leetcode",
+    "Test",
+    "libraryUseRecord",
+    "performanceOptimization",
+    "sourceCodeRead",
+    "thinking",
+    "typescript",
+    "开源项目架构分析和学习",
+    "electron",
+    "html",
+    "ChromeExtensions",
+    "NodeJS",
+    "SVG",
+    "VSCode",
+    "backend",
+    "buildMyOwn",
+    "db",
+    "MDNDocLearn",
+    "http",
+    "python",
+    "wxdev",
+
+    "toolInstall",
+    "庄子阅读笔记和读后感",
+    "life"
+  ]
+}
