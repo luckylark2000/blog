@@ -212,12 +212,18 @@
 
 ## Test
 
+- [几种Xpath浏览器插件对比](/Test/几种Xpath浏览器插件对比)
 - **PlayWright**
   - [palywight快速开始入门](/Test/PlayWright/palywight快速开始入门)
   - [playwright中如何模拟websocket](/Test/PlayWright/playwright中如何模拟websocket)
+  - [playwright使用setup来保存登录状态信息](/Test/PlayWright/playwright使用setup来保存登录状态信息)
+  - [playwright参数化测试](/Test/PlayWright/playwright参数化测试)
   - [playwright在use里面设置的配置不生效怎么处理](/Test/PlayWright/playwright在use里面设置的配置不生效怎么处理)
   - [playwright处理组件库文件上传组件input的display为none怎么处理上传逻辑](/Test/PlayWright/playwright处理组件库文件上传组件input的display为none怎么处理上传逻辑)
+  - [playwright如何在多个串行的测试用例之间重用单个Page对象](/Test/PlayWright/playwright如何在多个串行的测试用例之间重用单个Page对象)
+  - [playwright常用配置介绍](/Test/PlayWright/playwright常用配置介绍)
   - [playwright常见问题梳理](/Test/PlayWright/playwright常见问题梳理)
+  - [playwright的Fixtures夹具的使用](/Test/PlayWright/playwright的Fixtures夹具的使用)
 - **vitest**
   - [Vitest基本使用](/Test/vitest/Vitest基本使用)
 
@@ -329,6 +335,11 @@
 ## wxdev
 
 - [微信小程序原生开发基础知识](/wxdev/微信小程序原生开发基础知识)
+
+## systems
+
+- **window**
+  - [如何解决windows系统中sdxhelper占用高CPU问题](/systems/window/如何解决windows系统中sdxhelper占用高CPU问题)
 
 ## toolInstall
 

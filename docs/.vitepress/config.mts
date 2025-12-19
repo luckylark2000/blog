@@ -821,6 +821,10 @@ export default withMermaid({
         'collapsed': true,
         'items': [
           {
+            'text': '几种Xpath浏览器插件对比',
+            'link': '/Test/几种Xpath浏览器插件对比'
+          },
+          {
             'text': 'PlayWright',
             'collapsed': true,
             'items': [
@@ -833,6 +837,14 @@ export default withMermaid({
                 'link': '/Test/PlayWright/playwright中如何模拟websocket'
               },
               {
+                'text': 'playwright使用setup来保存登录状态信息',
+                'link': '/Test/PlayWright/playwright使用setup来保存登录状态信息'
+              },
+              {
+                'text': 'playwright参数化测试',
+                'link': '/Test/PlayWright/playwright参数化测试'
+              },
+              {
                 'text': 'playwright在use里面设置的配置不生效怎么处理',
                 'link': '/Test/PlayWright/playwright在use里面设置的配置不生效怎么处理'
               },
@@ -841,8 +853,20 @@ export default withMermaid({
                 'link': '/Test/PlayWright/playwright处理组件库文件上传组件input的display为none怎么处理上传逻辑'
               },
               {
+                'text': 'playwright如何在多个串行的测试用例之间重用单个Page对象',
+                'link': '/Test/PlayWright/playwright如何在多个串行的测试用例之间重用单个Page对象'
+              },
+              {
+                'text': 'playwright常用配置介绍',
+                'link': '/Test/PlayWright/playwright常用配置介绍'
+              },
+              {
                 'text': 'playwright常见问题梳理',
                 'link': '/Test/PlayWright/playwright常见问题梳理'
+              },
+              {
+                'text': 'playwright的Fixtures夹具的使用',
+                'link': '/Test/PlayWright/playwright的Fixtures夹具的使用'
               }
             ]
           },
@@ -1187,6 +1211,22 @@ export default withMermaid({
           {
             'text': '微信小程序原生开发基础知识',
             'link': '/wxdev/微信小程序原生开发基础知识'
+          }
+        ]
+      },
+      {
+        'text': 'systems',
+        'collapsed': true,
+        'items': [
+          {
+            'text': 'window',
+            'collapsed': true,
+            'items': [
+              {
+                'text': '如何解决windows系统中sdxhelper占用高CPU问题',
+                'link': '/systems/window/如何解决windows系统中sdxhelper占用高CPU问题'
+              }
+            ]
           }
         ]
       },
