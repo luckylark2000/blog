@@ -5,6 +5,8 @@
     "anticon",
     "commitlint",
     "CRXJS",
+    "httponly",
+    "justfile",
     "leetcode",
     "luckylark",
     "mousedown",
