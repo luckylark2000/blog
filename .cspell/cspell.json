@@ -3,6 +3,7 @@
   "language": "en",
   "words": [
     "anticon",
+    "chsh",
     "commitlint",
     "CRXJS",
     "httponly",
@@ -23,5 +24,10 @@
     "Vuex"
   ],
   "flagWords": [],
-  "ignorePaths": ["node_modules", "dist", "build", ".git"]
+  "ignorePaths": [
+    "node_modules",
+    "dist",
+    "build",
+    ".git"
+  ]
 }
