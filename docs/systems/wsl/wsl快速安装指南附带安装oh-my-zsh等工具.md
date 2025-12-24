@@ -42,7 +42,7 @@ wsl install
 sudo apt update && sudo apt upgrade -y
 ```
 
-可选地去添加镜像源（这里先不添加了，自行查阅）
+可选地去添加镜像源，参考清华镜像源官网教程：<https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/>
 
 ## 使用 mirrored 模式的 network
 
@@ -114,6 +114,20 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 一键安装 oh-my-zsh 主题，就大功告成了。
 
+想要直接每次进入 wsl 直接进入 home 目录的话可以：
+
+```bash
+nano ~/.zshrc
+```
+
+文件末尾添加：
+
+```bash
+cd ~
+```
+
+保存退出，重新进入 wsl，就会进入 home 目录了
+
 ## 安装 docker
 
 直接去官网下载 windows 版的 Docker Desktop Installer，然后一路 next 等待直到安装完成
@@ -147,8 +161,4 @@ https://docs.docker.com/go/wsl2/
 
 PS:有的电脑会安装不成功，之前在一个机器上安装，死活访问不了网络，执行`ip addr`无论开不开代理，只有一个 lo 这个本地回环地址 loopback，识别不到 eth0 之类的网卡，关键是转到 nat 模式也是访问不了，最后放弃了哈哈哈，去官方社区找 issue，发现也有类似的问题，但是官方没有给出解决方案。
 
-待验证原因：
-
-- 网卡被污染，需要重启
-- hyper-v 可能不需要开启，试试去 windows 上关闭该功能后重启能不能解决
-- 安装 docker desktop 的时候，可能网路是 nat 模式，现在转到 mirrored,网卡什么的被污染了，试试卸载 docker desktop，然后重启
+疑难杂症见官方排查适用于 Linux 的 Windows 子系统问题文档：<https://learn.microsoft.com/zh-cn/windows/wsl/troubleshooting>
