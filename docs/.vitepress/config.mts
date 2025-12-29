@@ -6,7 +6,7 @@ export default withMermaid({
   base: "/blog/",
   description: "记录成长之旅",
   head: [
-    ['link', { rel: 'icon', href: '/logo.svg' }],
+    ['link', { rel: 'icon', href: '/blog/logo.svg' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:title', content: 'luckylark2000-blog' }],
     [
