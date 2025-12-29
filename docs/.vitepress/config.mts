@@ -5,6 +5,20 @@ export default withMermaid({
   title: "coding 消烦员的博客",
   base: "/blog/",
   description: "记录成长之旅",
+  head: [
+    ['link', { rel: 'icon', href: '/logo.svg' }],
+    ['meta', { property: 'og:type', content: 'website' }],
+    ['meta', { property: 'og:title', content: 'luckylark2000-blog' }],
+    [
+      'meta',
+      {
+        property: 'og:description',
+        content: '记录成长之旅'
+      }
+    ],
+    ['meta', { property: 'og:url', content: 'https://github.com/luckylark2000' }],
+    ['meta', { property: 'og:image', content: 'https://luckylark2000.github.io/blog/images/logo.png' }]
+  ],
   markdown: {
     lineNumbers: true
   },
