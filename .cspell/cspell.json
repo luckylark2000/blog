@@ -21,13 +21,9 @@
     "vitepress",
     "vnode",
     "vnodes",
-    "Vuex"
+    "Vuex",
+    "wslconfig"
   ],
   "flagWords": [],
-  "ignorePaths": [
-    "node_modules",
-    "dist",
-    "build",
-    ".git"
-  ]
+  "ignorePaths": ["node_modules", "dist", "build", ".git"]
 }
