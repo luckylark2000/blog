@@ -1,5 +1,7 @@
 # CSRF 攻击的介绍和防御
 
+OWASP 上关于 CSRF 的权威指南:<https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html>
+
 CSRF 攻击，即跨站请求伪造，是一种利用网站用户在当前会话中的身份信息，在用户不知情的情况下，向网站发送恶意请求，从而实现恶意目的。
 
 一般是诱导用户通过点击某些链接，利用用户的登录身份信息，在第三方黑客站点发送请求 get/post 请求，实现恶意攻击，比如转账，修改用户名密码。
