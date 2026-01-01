@@ -22,7 +22,8 @@
     "vnode",
     "vnodes",
     "Vuex",
-    "wslconfig"
+    "wslconfig",
+    "powerlevel"
   ],
   "flagWords": [],
   "ignorePaths": ["node_modules", "dist", "build", ".git"]
