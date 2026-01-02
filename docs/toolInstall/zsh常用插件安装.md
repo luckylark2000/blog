@@ -21,3 +21,11 @@
 + autoload -U compinit && compinit
 source "$ZSH/oh-my-zsh.sh"
 ```
+
+## 主题色插件
+
+### powerlevel10k
+
+非常火的主题色插件
+
+<https://github.com/romkatv/powerlevel10k?tab=readme-ov-file#oh-my-zsh>
