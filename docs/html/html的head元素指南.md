@@ -2,7 +2,7 @@
 
 原文：<https://github.com/joshbuchea/HEAD>
 
-一个关于 HTML <head>元素的简单指南
+一个关于 HTML `<head>`元素的简单指南
 
 ## 最小推荐配置
 
@@ -25,7 +25,7 @@
 
 ## 元素
 
-有效的 <head> 元素包括：`meta`, `link`, `title`,  `style`, `script`, `noscript`和`base`。
+有效的 `<head>` 元素包括：`meta`, `link`, `title`,  `style`, `script`, `noscript`和`base`。
 
 这些元素为网站技术提供了关于 document 文档应该怎样被感知和渲染的信息。网站技术包括浏览器，搜索引擎，机器人等等。
 
