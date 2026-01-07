@@ -40,7 +40,7 @@
 
 #### 1. 设置共享权限
 
-```powershell
+```txt
 # 右键点击 repo-name 文件夹 → 属性 → 共享 → 高级共享...
 # 勾选“共享此文件夹”
 # 点击“权限”按钮，设置 Everyone 仅读取权限
@@ -92,7 +92,7 @@ git config --local receive.denyCurrentBranch updateInstead
 
 #### 1. 创建 bare 仓库
 
-```powershell
+```bash
 cd E:\projects\test
 git init --bare repo-name.git
 ```
