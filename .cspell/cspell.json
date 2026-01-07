@@ -3,6 +3,7 @@
   "language": "en",
   "words": [
     "anticon",
+    "bunfig",
     "chsh",
     "commitlint",
     "CRXJS",
@@ -12,8 +13,11 @@
     "luckylark",
     "mousedown",
     "mouseleave",
+    "NTFS",
     "nums",
+    "powerlevel",
     "readline",
+    "rrweb",
     "strs",
     "stylelint",
     "tada",
@@ -22,9 +26,13 @@
     "vnode",
     "vnodes",
     "Vuex",
-    "wslconfig",
-    "powerlevel"
+    "wslconfig"
   ],
   "flagWords": [],
-  "ignorePaths": ["node_modules", "dist", "build", ".git"]
+  "ignorePaths": [
+    "node_modules",
+    "dist",
+    "build",
+    ".git"
+  ]
 }

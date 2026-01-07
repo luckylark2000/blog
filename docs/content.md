@@ -164,6 +164,7 @@
 
 ## Git
 
+- [Windows内网环境搭建Git仓库方案](/Git/Windows内网环境搭建Git仓库方案)
 - [howCheckFileHistory](/Git/howCheckFileHistory)
 - [如何对比当前工作目录和某个commit的代码差异](/Git/如何对比当前工作目录和某个commit的代码差异)
 
@@ -354,4 +355,3 @@
 ## life
 
 - [眼睛疼痛中医辩证治疗记录](/life/眼睛疼痛中医辩证治疗记录)
-
