@@ -3,6 +3,10 @@
   "collapsed": true,
   "items": [
     {
+      "text": "Windows内网环境搭建Git仓库方案",
+      "link": "/Git/Windows内网环境搭建Git仓库方案"
+    },
+    {
       "text": "howCheckFileHistory",
       "link": "/Git/howCheckFileHistory"
     },

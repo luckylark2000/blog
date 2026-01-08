@@ -15,6 +15,10 @@
           "link": "/DataVisualize/ECharts/带有渐变色的柱状图"
         }
       ]
+    },
+    {
+      "text": "diff2html 的使用处理文件差异可视化显示",
+      "link": "/DataVisualize/diff2html的使用处理文件差异可视化显示"
     }
   ]
 }
