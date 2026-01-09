@@ -24,7 +24,7 @@ axios.interceptors.request.use(config => {
 
 ### 发起请求时输出
 
-```
+```txt
 请求拦截器 2
 请求拦截器 1
 ```
@@ -59,7 +59,7 @@ axios.interceptors.response.use(res => {
 
 ### 收到响应时输出
 
-```
+```txt
 响应拦截器 1
 响应拦截器 2
 ```
@@ -85,7 +85,7 @@ S1 → S2
 
 ### 执行顺序为
 
-```
+```txt
 调用 axios.get()
     ↓
 [请求阶段]
@@ -136,7 +136,7 @@ axios.get('https://httpbin.org/get').then(() => {
 
 ### 控制台输出
 
-```
+```txt
 R2
 R1
 S1
