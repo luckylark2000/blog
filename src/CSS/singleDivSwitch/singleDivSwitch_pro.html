@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  #switch {
+    --left: 4px;
+
+    position: relative;
+    cursor: pointer;
+    width: 80px;
+    height: 40px;
+    background: #e0e0e0;
+    color: #e0e0e0;
+    border-radius: 20px;
+  }
+
+  #switch::before {
+    content: attr(data-off-text);
+    /* content: attr(data-value); */
+    /* content 在伪元素居中 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    background: white;
+    border-radius: 50%;
+    top: 4px;
+    transform: translateX(var(--left));
+    transition: transform 0.3s ease-in-out;
+  }
+
+  #switch[data-value="on"] {
+    background: green;
+    /* 80px 是div宽度，32px 是before伪元素宽度 */
+    --left: calc(80px - 32px - 4px);
+    color: black;
+  }
+
+  #switch[data-value="on"]::before {
+    content: attr(data-on-text);
+  }
+</style>
+
+<body>
+  <div id="switch"
+       data-value="off"
+       data-on-text="T"
+       data-off-text="F"></div>
+  <script>
+    document.getElementById('switch').addEventListener('click', (e) => {
+      const value = e.target.dataset.value;
+      e.target.dataset.value = (value === 'off' ? 'on' : 'off');
+    });
+  </script>
+</body>
+
+</html>
