@@ -14,3 +14,7 @@
 - 配合git，每做一个功能，都提交一个commit，这样ai修改了源码，也能知道修改了哪些地方。人工review,主要做大的方向的把控
 
 ## 工程化
+
+- 使用阿里的 Lingma 来自动生成 commit 信息
+- 使用Claude Code 执行 `/init` 生成 `Claude.md` 文件，会自动生成项目的详细信息。项目钟可以自己维护一些 command，Skill，.claude 供 Claude 使用
+- MCP 的使用，各种MCP工具都可以尝试，context7，playwright, chrome devtools mcp 等等吧
