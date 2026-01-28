@@ -1,5 +1,33 @@
 # playwright 常见问题梳理
 
+## 安装很慢
+
+### vscode 中安装浏览器内核慢
+
+就是这个`ctrl + shift + p` 后搜索 `Test:install playwright`，设置好点击ok之后安装内核的过程比较慢
+
+建议开代理，梯子。
+
+### npx playwright install 很慢
+
+设置镜像加速
+
+新建.env，写入：
+
+```bash
+PLAYWRIGHT_DOWNLOAD_HOST=https://npmmirror.com/mirrors/playwright
+```
+
+## .specs.ts 没有显示三角执行图标
+
+vscode 没有识别出 specs.ts 文件并显示三角执行图标
+
+一般情况下是因为，你电脑卡了，或者 vscode 卡了。可以试试重启电脑或者 vscode，其它的情况如果有报错之类的，自行搜索解决
+
+## 多workspace工作空间playwright插件失效
+
+playwright 的vscode插件多workspace插件失效，识别不了测试用例，没有运行图标，所以请保持当前工作目录只有一个工作空间
+
 ## 获取一个元素时间超过默认时间怎么处理
 
 - 最关键的就是找到是什么原因阻塞的，等待该事件，一般情况加是接口响应速度慢，在这个元素之前加上 waitForResponse
