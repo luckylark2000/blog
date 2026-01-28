@@ -125,3 +125,5 @@ GlobalWorkerOptions.workerPort = new PdfjsWorker()
 ## 参考文章
 
 [vue3中借助 pdfjs-dist 实现pdf文件展示、文本选中功能及使用过程中部分问题处理](https://blog.csdn.net/qq_45897239/article/details/136063330)
+
+[pdfjs viewer 实战指南](https://juejin.cn/post/7486751851070406708)
