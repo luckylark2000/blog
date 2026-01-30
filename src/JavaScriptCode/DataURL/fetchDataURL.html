@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script>
+    fetch(`data:,hello${'A'.repeat(10_000_000)}`)
+      .then(async response => {
+        const res = await response.text()
+        // console.log(response.url, res)
+        console.log(res.length)
+      }).catch(error => console.log(error))
+
+    axios.get(`data:,hello${'A'.repeat(10_000_000)}`)
+      .then(res => {
+        console.log(res.data.length)
+        // console.log(res.config.url, res.data)
+      })
+      .catch(error => console.log(error))
+  </script>
+</body>
+
+</html>
